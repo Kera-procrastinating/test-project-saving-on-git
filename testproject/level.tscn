@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ghtb2ydnbd2f"]
+
+[ext_resource type="Script" uid="uid://bhx8spm32tjk2" path="res://level.gd" id="1_oi3di"]
+[ext_resource type="PackedScene" uid="uid://dbl0fswif3ccv" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://bkmdpxsnc8gxu" path="res://enemy.tscn" id="3_0b4ue"]
+
+[node name="Level" type="Node2D"]
+rotation = -0.000895799
+script = ExtResource("1_oi3di")
+
+[node name="Player" parent="." instance=ExtResource("1_u52ul")]
+position = Vector2(308.716, 317.277)
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
+
+[node name="Enemy" parent="." instance=ExtResource("3_0b4ue")]
+position = Vector2(1113.86, 153.998)
+scale = Vector2(1.7, 1.7)
+collision_layer = 2
